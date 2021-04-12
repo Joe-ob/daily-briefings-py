@@ -40,7 +40,7 @@ if __name__ == "__main__":
     <h3>This is a test of the Daily Briefing Service</h3>
 
     <h4>Today's Date</h4>
-    <p>Monday, January 1, 2040</p>
+    <p>Monday, January 1, 2020</p>
 
     <h4>My Stocks</h4>
     <ul>
