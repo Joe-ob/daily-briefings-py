@@ -8,12 +8,14 @@ home_routes = Blueprint("home_routes", __name__)
 @home_routes.route("/home")
 def index():
     print("HOME...")
-    return "Welcome Home"
+#    return "Welcome Home"
+    return renders_templates("home.html")
 
 @home_routes.route("/about")
 def about():
     print("ABOUT...")
-    return "About Me"
+ #   return "About Me"
+    return renders_templates("about.html")
 
 @home_routes.route("/hello")
 def hello_world():
@@ -22,4 +24,6 @@ def hello_world():
     # ... which will return None instead of throwing an error if key is not present
     # ... see also: https://www.w3schools.com/python/ref_dictionary_get.asp
     name = request.args.get("name") or "World"
-    return f"Hello, {name}!"
+ #   return f"Hello, {name}!"
+    message = f"Hello, {name}!"
+    return renders_templates("hello.html", message=message)
